@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <!--FUENTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Passion+One&display=swap" rel="stylesheet">
+
+
+    <!--BOOTSTRAP 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <title>The Ramones - Contacto</title>
+</head>
+
+<body>
+    <main class="bodySec">
+        <header class="headerSec sticky-top">
+            <nav class="navSec">
+                <ul class="gridContainer">
+                    <li class="gItem item1"><a href="./bio.html">BIO</a></li>
+                    <li class="gItem item2"><a href="./members.html">MIEMBROS</a></li>
+                    <li class="gItem item3"><div><a class="homeLink" href="./index.html"><img class="homeImg" src="./img/home.png" alt=""></a></div></li>
+                    <li class="gItem item4"><a href="./gallery.html">GALERIA</a></li>
+                    <li class="gItem item5"><a class="activeLink" href="./contact.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="sectionCont sectionContC">
+            <div class="sectionBG">
+                <h2 class="subtitle">CONTACTO</h2>
+
+                <form class="row">
+                    <div class="col-md-6">
+                        <label for="mail" class="text">e-mail</label>
+                        <input id="mail" class="form-control form-control-sm" type="email" name="mail">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="nombre" class="text">Nombre</label>
+                        <input id="nombre" class="form-control form-control-sm" type="text" name="nombre">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="mensaje" class="text">Mensaje</label>
+                        <textarea id="mensaje" class="form-control form-control-sm" name="mensaje" rows="5"
+                            cols="40"></textarea>
+                    </div>
+
+                    <div>
+                        <button class="btnSend" type="submit">Enviar</button>
+                </form>
+            </div>
+
+            </div>
+        </section>
+        <footer>
+            D. Takashima ©
+        </footer>
+    </main>
+
+
+</body>
+
+</html>
