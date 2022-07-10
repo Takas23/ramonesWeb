@@ -1,4 +1,6 @@
 /*
+MIN WIDTH  320px
+
 FONTS
 'Fira Sans', sans-serif;
 'Passion One', cursive;
@@ -50,11 +52,18 @@ main {
     cursor: default;
 }
 
-.btnSend, nav a{
+.btnSend, nav a {
     transition-duration: 0.4s;
 }
 
 /*HOME*/
+
+.bodyHome {
+    background: url("./img/ramonesFront.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+/*---------------*/
+
 /*SOCIAL BTNS*/
 .socials {
     position: fixed;
@@ -96,12 +105,6 @@ main {
 }
 /*----------------*/
 
-.bodyHome {
-    background: url("./img/ramonesFront.jpg") no-repeat center center fixed;
-    background-size: cover;
-}
-/*---------------------*/
-
 /*HEADER HOME*/
 .headerHome{
     padding-top: 25vh;
@@ -134,9 +137,60 @@ main {
 /*--------------*/
 
 /*MENU SECTIONS*/
+nav {
+    z-index: 10;
+}
+
+nav:not(.navFront) {
+    background-color: black;
+    border-bottom: 2px solid #c9536a;
+}
+
+.homeLink:hover {
+    filter: contrast(200%);;
+}
+
+nav a:not(.homeLink, .activeLink):hover {
+    background-color: #ffb5c9;
+    background-position: center center;
+    background: linear-gradient(#ffb5c9, #ffb5c900);
+    color: #212121;
+    text-shadow: 1px 1px #ff8398;
+}
+
+.activeLink {
+    color: white !important;
+    text-shadow: 1px 1px #ff8398;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    font-size: calc(15px + 1.5vw);
+}
+
+nav a {
+    padding: 10px ;
+    text-shadow: 2px 2px #484848;
+}
+
+.navSec li:nth-child(-n+2) {
+    text-align: right;
+}
+
+.navSec li:nth-child(n+3) {
+    text-align: left;
+}
+/*---------------------------------*/
+
 /*GRID*/
 .homeImg {
-    height: calc(70px + 2.5vw);
+    height: calc(70px + 1.5vw);
 
 }
 
@@ -173,57 +227,6 @@ main {
     grid-row: 2;
 }
 /*----------------*/
-
-nav {
-    z-index: 10;
-}
-
-nav:not(.navFront) {
-    background-color: black;
-    border-bottom: 2px solid #c9536a;
-}
-
-.homeLink:hover {
-    filter: contrast(200%);;
-}
-
-nav a:not(.homeLink, .activeLink):hover {
-    background-color: #ffb5c9;
-    background-position: center center;
-    background: linear-gradient(#ffb5c9, #ffb5c900);
-    color: #212121;
-    text-shadow: 1px 1px #ff8398;
-}
-
-.activeLink {
-    color: white !important;
-    text-shadow: 1px 1px #ff8398;
-}
-
-nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-nav li {
-    display: inline;
-    font-size: calc(15px + 2vw);
-}
-
-nav a {
-    padding: 10px ;
-    text-shadow: 2px 2px #484848;
-}
-
-.navSec li:nth-child(-n+2) {
-    text-align: right;
-}
-
-.navSec li:nth-child(n+3) {
-    text-align: left;
-}
-/*---------------------------------*/
 
 /*SECTION*/
 .subtitle {
@@ -311,6 +314,7 @@ input, textarea {
 .btnSend:hover {
     background-color: #c9536a;
     color: white;
+    text-shadow: 1px 1px #212121;
     box-shadow: 0 1px 10px 0 #ffb5c9 ;
 }
 
@@ -320,10 +324,12 @@ input, textarea {
     margin: 8px;
     border: none;
     padding: 10px 32px;    
-    font-weight: bold;
     border-radius: 8px;
+    font-weight: bold;
     color: #212121 ;
+    text-shadow: 1px 1px #ff8398;
 }
+/*----------------------------------*/
 
 
 /*----FOOTER----*/
@@ -340,7 +346,7 @@ footer {
 /*--------------*/
 
 
-
+/*MEDIA QUERY*/
 /*DESKTOP*/
 @media screen and (min-width: 1024px) {
     .sectionContC {
@@ -354,20 +360,16 @@ footer {
     .tableMem {
         min-width: 542px;
     }
-
-
-
-
 }
 
-/*SMARTPHONE - min width 320px*/
+/*SMARTPHONE*/
 @media screen and (max-width: 767px) {
-
     .bodyHome {
         background: url("./img/ramonesFrontSP.jpg") no-repeat;
         background-size: cover;
     }
 
+    /*MENU*/
     .flexNav {
         flex-direction: column;
         text-align: center;
@@ -377,13 +379,9 @@ footer {
         padding-top: 12px;
     }
 
-    /*MENU*/
-
     nav {
         padding: 8px;
     }
-
-    /*MENU SECTIONS*/
 
     /*SECTIONS*/
     .sectionCont {
@@ -414,8 +412,4 @@ footer {
         font-size: calc(12px + 0.6vw);
         padding-left: 0;
     }
-
-    /*CONTACT*/
-
-
 }
